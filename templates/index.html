@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <title>Counter</title>
+</head>
+<body class="container mt-3">
+  <div class="card">
+  <h1 class="card-header text-center">Counter</h1>
+  <h3 class="card-body text-center">{{session['count']}} time(s) visited</h3>
+  </div>
+  <form action='/count' method='post' class="text-center mt-4">
+    <button type="submit" name="change" value="add" class="btn-success">Add +2 to Counter</button>
+    <button type="submit" name="change" value="reset" class="btn-danger">Reset Counter</button>
+  </form>
+</body>
+</html>
